@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/noamseg/interview-coach-skill/references/schemas/project-deep-dive.schema.json",
+  "title": "Project Deep Dive",
+  "type": "object",
+  "required": ["schema_version", "id", "title", "facts", "ownership", "decisions", "outcomes", "open_questions", "claim_ids", "story_ids"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "id": { "type": "string", "pattern": "^project_[a-z0-9_]+$" },
+    "title": { "type": "string", "minLength": 1 },
+    "facts": { "type": "array", "items": { "type": "string" } },
+    "business_problem": { "type": "string" },
+    "architecture": { "type": "array", "items": { "type": "string" } },
+    "ownership": { "type": "array", "items": { "type": "string" } },
+    "decisions": { "type": "array", "items": { "type": "string" } },
+    "alternatives": { "type": "array", "items": { "type": "string" } },
+    "failure_modes": { "type": "array", "items": { "type": "string" } },
+    "measurements": { "type": "array", "items": { "type": "string" } },
+    "outcomes": { "type": "array", "items": { "type": "string" } },
+    "lessons": { "type": "array", "items": { "type": "string" } },
+    "open_questions": { "type": "array", "items": { "type": "string" } },
+    "claim_ids": { "type": "array", "items": { "type": "string", "pattern": "^claim_[a-z0-9_]+$" }, "uniqueItems": true },
+    "story_ids": { "type": "array", "items": { "type": "string", "pattern": "^S[0-9]{3,}$" }, "uniqueItems": true }
+  }
+}

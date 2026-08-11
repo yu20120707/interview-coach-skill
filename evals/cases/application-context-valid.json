@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "id": "app_acme_backend",
+  "company": "Acme",
+  "role": "Backend Engineer",
+  "status": "interviewing",
+  "artifacts": {
+    "jd": { "path": "applications/app_acme_backend/jd.md", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+    "submitted_resume": { "path": "applications/app_acme_backend/submitted-resume.md", "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "locked_at": "2026-08-10T12:00:00Z" },
+    "claim_ids": ["claim_payment_cache"]
+  },
+  "rounds": [{ "id": "round_technical_1", "format": "technical deep dive", "status": "planned", "result": "pending" }]
+}

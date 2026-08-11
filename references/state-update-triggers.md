@@ -25,3 +25,8 @@ Write to `coaching_state.md` whenever:
 - **reflect** archives the coaching state (add Status: Archived header)
 - **Meta-check conversations** (record candidate's response and any coaching adjustment to Meta-Check Log)
 - **Any session where the candidate reveals coaching-relevant personal context** — preferences, emotional patterns, interview anxieties, scheduling preferences, etc. (add to Coaching Notes)
+- **Application-aware `prep`** resolves durable artifacts (update Evidence Workspace active application ID and validation date; structured `context.json` remains authoritative for paths)
+- **Evidence-aware `practice`, `mock`, or `analyze`** completes (validate/write `interview-session.json`; update `weak-points.json`; recommend evidence-backed Claim defensibility transitions; then summarize material changes in coaching state)
+- **`debrief` with an application context** captures a real round (write a `real_debrief` session when enough data exists; use `not_scored` for low-confidence recalled answers)
+- **External feedback maps to a Weak Point** (append observed evidence; keep coach interpretation as inferred; update lifecycle and recurrence)
+- **A story is linked to a Project Deep Dive or Claim** (add Project ID / Claim IDs to Story Details metadata without duplicating project facts)

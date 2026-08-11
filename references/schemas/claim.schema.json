@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/noamseg/interview-coach-skill/references/schemas/claim.schema.json",
+  "title": "Interview Claim Collection",
+  "type": "object",
+  "required": ["schema_version", "claims"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "source", "risk", "defensibility", "status", "evidence", "required_probes"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^claim_[a-z0-9_]+$" },
+          "statement": { "type": "string", "minLength": 1 },
+          "source": {
+            "type": "object",
+            "required": ["type", "path"],
+            "additionalProperties": false,
+            "properties": {
+              "type": { "enum": ["submitted_resume", "tailored_resume", "master_resume", "story", "application_answer", "user_statement"] },
+              "path": { "type": "string", "minLength": 1 },
+              "application_id": { "type": "string", "pattern": "^app_[a-z0-9_]+$" }
+            }
+          },
+          "project_id": { "type": "string", "pattern": "^project_[a-z0-9_]+$" },
+          "story_ids": { "type": "array", "items": { "type": "string", "pattern": "^S[0-9]{3,}$" }, "uniqueItems": true },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["kind", "detail", "confidence"],
+              "additionalProperties": false,
+              "properties": {
+                "kind": { "enum": ["user_confirmed", "document", "measurement", "transcript", "inference"] },
+                "detail": { "type": "string", "minLength": 1 },
+                "confidence": { "enum": ["high", "medium", "low"] },
+                "source_path": { "type": "string" }
+              }
+            }
+          },
+          "assumptions": { "type": "array", "items": { "type": "string" } },
+          "risk": { "enum": ["low", "medium", "high"] },
+          "defensibility": { "enum": ["untested", "weak", "adequate", "strong"] },
+          "status": { "enum": ["candidate", "active", "retired"] },
+          "required_probes": {
+            "type": "array",
+            "items": { "enum": ["fact", "mechanism", "ownership", "measurement", "tradeoff", "failure", "alternative", "counterfactual"] },
+            "uniqueItems": true
+          },
+          "last_tested_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

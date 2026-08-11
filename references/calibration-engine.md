@@ -221,6 +221,51 @@ Ask the candidate about the interviews where prediction failed:
 
 ---
 
+## Section 8: Evidence-Aware Calibration
+
+Structured evidence increases calibration precision but does not change the five core dimensions.
+
+### Evidence priority
+
+When evidence conflicts, use this order:
+
+1. faithful external interviewer/recruiter feedback tied to a round;
+2. real transcript observations;
+3. real interview debrief observations (lower confidence when recalled);
+4. application-aware mock/practice evidence;
+5. coach inference or candidate prediction.
+
+An outcome alone is not proof that a particular Claim or dimension failed. Require linked feedback, transcript evidence, or a repeated pattern before changing a dimension anchor.
+
+### Claim defensibility calibration
+
+During `progress`:
+
+1. Compare practice probe performance with real questions testing the same Claim.
+2. Flag overconfidence when a Claim is `adequate|strong` internally but fails a materially equivalent real probe.
+3. Flag underconfidence when a `weak|untested` Claim repeatedly survives real/adversarial probes.
+4. Recommend a defensibility transition with exact session/unit evidence.
+5. Do not auto-retire or strengthen resume wording without candidate confirmation.
+
+### Weak Point lifecycle audit
+
+- Resolve only after two later successful tests, including one relevant/adversarial test.
+- A real failure after resolution sets `resurfaced` and increments recurrence.
+- Repeated inferred evidence without observation may justify investigation, not high severity.
+- External feedback contradicting a resolved status reopens the item and triggers a calibration note.
+
+### Coverage metrics
+
+Report these only when structured evidence exists:
+
+- high-risk Claim required probes covered / required;
+- active Claims by defensibility;
+- open/resurfaced Weak Points by severity;
+- application sessions by context mode;
+- observed-vs-inferred contradiction count.
+
+Coverage is readiness evidence, not a hiring probability.
+
 ## Integration with Story Mapping Engine
 
 - When scoring drift adjusts a dimension score, flag stories in the storybank whose strength ratings were heavily influenced by that dimension. They may need re-evaluation. Example: "Your Substance scores have been recalibrated down by 0.5. S003 and S007 were rated based on Substance evidence — consider re-scoring them."

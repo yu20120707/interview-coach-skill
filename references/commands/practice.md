@@ -1,5 +1,18 @@
 # practice — Practice System
 
+### Evidence-Aware Session Setup
+
+When a target company/application is explicit or active:
+
+1. Resolve application context and disclose any coverage limitation.
+2. Build an internal Question Plan before the first question.
+3. Select active high-risk/high-value Claims, JD must-haves, and open/resurfaced Weak Points.
+4. Run Claim questions with the Progressive Probing Protocol; keep one question at a time.
+5. Record question sequence, parent, probe type, depth, linked Claim, answer evidence, and A–D grade in an `interview-session.json` record.
+6. Continue to score the human-facing answer on the five core dimensions only.
+
+Default plan: Claims 35%, JD 25%, Weak Points 20%, round/format 10%, new/general 10%. Rebalance per `references/interview-evidence/question-planner.md`; these are planning weights, not a second score.
+
 Show menu with progression status:
 
 ```text
@@ -136,6 +149,9 @@ After each practice session (not per-round — at the end of the session):
 1. **Add scores to Score History** — Type: practice. Leave Hire Signal blank (practice doesn't produce one).
 2. **Update Drill Progression** — advance stage if gating threshold met, update Revisit Queue if weaknesses detected.
 3. **Review Active Coaching Strategy** — if practice scores reveal patterns that confirm or contradict the current strategy, update accordingly. Preserve Previous approaches when changing strategy.
+4. **Persist evidence session** — when structured evidence state exists, validate and write the session record under the active application's `interview/` directory.
+5. **Update Weak Points** — create/update only material demonstrated gaps; classify each supporting item as observed or inferred. A resolved item that fails again becomes resurfaced.
+6. **Recommend Claim change, don't silently apply it** — any defensibility downgrade cites the exact session/question evidence.
 
 ### `practice technical` — Session Protocol
 

@@ -2,10 +2,18 @@
 .DS_Store
 
 # Personal coaching data — contains stories, scores, interview targets, and concerns
-coaching_state.md
+/coaching_state.md
+/claims.json
+/weak-points.json
+/applications/
+/projects/
 
 # Personal interview materials (resume, transcripts, company folders)
 materials/
 
 # Active skill file (created by copying SKILL.md during setup)
 CLAUDE.md
+
+# Python development artifacts
+__pycache__/
+*.py[cod]

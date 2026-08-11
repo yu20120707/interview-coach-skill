@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/noamseg/interview-coach-skill/references/schemas/application-context.schema.json",
+  "title": "Application Interview Context",
+  "type": "object",
+  "required": ["schema_version", "id", "company", "role", "status", "artifacts", "rounds"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "id": { "type": "string", "pattern": "^app_[a-z0-9_]+$" },
+    "company": { "type": "string", "minLength": 1 },
+    "role": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["preparing", "applied", "screening", "interviewing", "final", "offer", "rejected", "withdrawn", "closed"] },
+    "artifacts": {
+      "type": "object",
+      "required": [],
+      "additionalProperties": false,
+      "properties": {
+        "jd": { "type": "object", "required": ["path", "sha256"], "additionalProperties": false, "properties": { "path": { "type": "string", "minLength": 1 }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" } } },
+        "submitted_resume": { "type": "object", "required": ["path", "sha256", "locked_at"], "additionalProperties": false, "properties": { "path": { "type": "string", "minLength": 1 }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "locked_at": { "type": "string", "format": "date-time" } } },
+        "tailored_resume": { "type": "object", "required": ["path"], "additionalProperties": false, "properties": { "path": { "type": "string", "minLength": 1 }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" } } },
+        "master_resume": { "type": "object", "required": ["path"], "additionalProperties": false, "properties": { "path": { "type": "string", "minLength": 1 }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" } } },
+        "claim_ids": { "type": "array", "items": { "type": "string", "pattern": "^claim_[a-z0-9_]+$" }, "uniqueItems": true }
+      }
+    },
+    "rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "format", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^round_[a-z0-9_]+$" },
+          "format": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["planned", "completed", "cancelled"] },
+          "date": { "type": "string", "format": "date" },
+          "session_path": { "type": "string" },
+          "result": { "enum": ["pending", "advanced", "rejected", "offer", "unknown"] }
+        }
+      }
+    }
+  }
+}

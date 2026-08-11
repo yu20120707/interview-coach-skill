@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/noamseg/interview-coach-skill/references/schemas/interview-session.schema.json",
+  "title": "Interview Session",
+  "type": "object",
+  "required": ["schema_version", "id", "session_type", "created_at", "context_mode", "question_plan", "units", "scores", "observations", "inferences"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "id": { "type": "string", "pattern": "^session_[a-z0-9_]+$" },
+    "application_id": { "type": "string", "pattern": "^app_[a-z0-9_]+$" },
+    "round_id": { "type": "string", "pattern": "^round_[a-z0-9_]+$" },
+    "session_type": { "enum": ["practice", "mock", "analysis", "real_debrief"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "context_mode": { "enum": ["submitted_application", "tailored_application", "jd_plus_resume", "resume_only", "conversation_only"] },
+    "coverage_limitations": { "type": "array", "items": { "type": "string" } },
+    "question_plan": {
+      "type": "object",
+      "required": ["allocations", "covered_sources"],
+      "additionalProperties": false,
+      "properties": {
+        "allocations": { "type": "object", "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 } },
+        "covered_sources": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sequence", "question", "answer_summary", "grade", "probe_type", "depth"],
+        "additionalProperties": false,
+        "properties": {
+          "sequence": { "type": "integer", "minimum": 1 },
+          "parent_sequence": { "type": "integer", "minimum": 1 },
+          "question": { "type": "string", "minLength": 1 },
+          "answer_summary": { "type": "string" },
+          "grade": { "enum": ["A", "B", "C", "D", "not_scored"] },
+          "probe_type": { "enum": ["fact", "mechanism", "ownership", "measurement", "tradeoff", "failure", "alternative", "counterfactual", "behavioral", "general"] },
+          "depth": { "type": "integer", "minimum": 0, "maximum": 7 },
+          "claim_ids": { "type": "array", "items": { "type": "string", "pattern": "^claim_[a-z0-9_]+$" }, "uniqueItems": true },
+          "evidence": { "type": "string" }
+        }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "required": ["substance", "structure", "relevance", "credibility", "differentiation"],
+      "additionalProperties": false,
+      "properties": {
+        "substance": { "type": "number", "minimum": 1, "maximum": 5 },
+        "structure": { "type": "number", "minimum": 1, "maximum": 5 },
+        "relevance": { "type": "number", "minimum": 1, "maximum": 5 },
+        "credibility": { "type": "number", "minimum": 1, "maximum": 5 },
+        "differentiation": { "type": "number", "minimum": 1, "maximum": 5 }
+      }
+    },
+    "observations": { "type": "array", "items": { "type": "string" } },
+    "inferences": { "type": "array", "items": { "type": "string" } },
+    "weak_point_ids": { "type": "array", "items": { "type": "string", "pattern": "^weak_[a-z0-9_]+$" }, "uniqueItems": true }
+  }
+}

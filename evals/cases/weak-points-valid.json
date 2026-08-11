@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "weak_points": [
+    {
+      "id": "weak_latency_attribution",
+      "topic": "Cannot fully attribute the claimed latency improvement.",
+      "severity": "medium",
+      "status": "open",
+      "evidence": [
+        { "kind": "observed", "detail": "Did not explain traffic-mix normalization in the mock.", "source": "session_acme_mock_001#1" },
+        { "kind": "inferred", "detail": "Attribution gap may weaken credibility.", "source": "session_acme_mock_001" }
+      ],
+      "dimension_links": ["Substance", "Credibility"],
+      "claim_ids": ["claim_payment_cache"],
+      "next_drill": "Reconstruct baseline, comparison window, traffic normalization, and attribution caveats.",
+      "first_detected_at": "2026-08-10T12:00:00Z",
+      "updated_at": "2026-08-10T12:00:00Z",
+      "recurrence_count": 0
+    }
+  ]
+}

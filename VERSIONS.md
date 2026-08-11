@@ -1,5 +1,12 @@
 # Version Roadmap
 
+## Unreleased — Evidence-aware interview coaching
+
+- Added optional application contexts tied to immutable submitted artifacts.
+- Added v1.0 Claim, Project Deep Dive, Interview Session, and Weak Point contracts.
+- Added evidence-aware planning and progressive probes to existing coaching commands.
+- Added observed-vs-inferred feedback separation, SHA-256 artifact locking/tamper detection, calibration, migration, templates, and regression validation.
+
 Each version has a clear thesis — not a feature grab bag.
 
 ---

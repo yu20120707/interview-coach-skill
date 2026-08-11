@@ -1,5 +1,13 @@
 # mock — Full Simulated Interview
 
+### Evidence-Aware Setup
+
+For a company/role mock, resolve the actual application context first. Prefer the submitted resume and active Claims from that version. State limitations when only a tailored/current resume is available.
+
+Build an internal Question Plan using Claims, JD must-haves, Weak Points, round format, and a small general-ability reserve. Do not reveal the plan. During execution, use progressive probe chains for selected Claims, while preserving the requested mock format and 4–6 major-question arc.
+
+The mock has one scoring system: Substance, Structure, Relevance, Credibility, and Differentiation. A–D probe grades are internal evidence for those scores, not a competing scorecard.
+
 A complete simulated interview (4-6 questions in sequence) with holistic feedback on the full arc — not just individual answers.
 
 ### Setup
@@ -197,6 +205,8 @@ After the mock debrief:
 1. **Add scores to Score History** — Type: mock. Include the Hire Signal.
 2. **Record self-assessment delta** — Self-Δ: over/under/accurate based on the pre-debrief self-assessment.
 3. **Update Active Coaching Strategy** if the mock reveals new patterns or confirms/contradicts the current strategy. Preserve Previous approaches when updating — move the old approach there before writing the new one.
+4. **Write the structured session** when evidence state exists, including context mode, actual covered sources, probe chains, observations, inferences, and linked Weak Point IDs.
+5. **Update Claim defensibility and Weak Points** only through evidence-backed transitions. High-risk Claims need at least three distinct successful required probes before becoming adequate.
 
 ### Interviewer's Inner Monologue — How To Write It
 

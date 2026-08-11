@@ -1,5 +1,18 @@
 # progress — Trend Review Workflow
 
+### Evidence Readiness Review
+
+When structured evidence state exists, include evidence readiness without replacing the five-dimension trend review:
+
+- active Claims by risk and defensibility;
+- required-probe coverage for high-risk Claims;
+- open/improving/resurfaced Weak Points by severity and recurrence;
+- resolved Weak Points that passed two later tests;
+- application contexts operating in degraded mode;
+- contradictions between external observed feedback and coach inference/scores.
+
+Use real interview outcomes and observed feedback as stronger calibration evidence than simulated performance. Do not equate rejection with failure on every tracked Claim.
+
 ### Minimum Data Thresholds
 
 The value of `progress` scales with the data available. Before running the full protocol, assess what's in `coaching_state.md` and adapt:
@@ -253,6 +266,15 @@ Draws from: Score History trends, storybank gaps, avoidance patterns (from Coach
 
 ## Revisit Queue
 - Past weaknesses to retest:
+
+## Evidence Readiness (if structured evidence state exists)
+- Active Claims: [count by low/medium/high risk]
+- Defensibility: [untested/weak/adequate/strong counts]
+- High-risk probe coverage: [covered / required]
+- Open or resurfaced high-severity Weak Points: [top 3]
+- Recently resolved items and confirming tests:
+- Application coverage limitations:
+- Observed-feedback contradictions requiring calibration:
 
 ## Top 2 Priorities (Next 2 Weeks)
 1. Priority:

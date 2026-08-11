@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "id": "project_payment_platform",
+  "title": "Payment API cache redesign",
+  "facts": ["The service handled payment-read traffic."],
+  "business_problem": "Tail latency degraded during peak traffic.",
+  "architecture": ["Application cache in front of the primary datastore."],
+  "ownership": ["Candidate proposed the cache-key and invalidation change."],
+  "decisions": ["Use bounded TTL with explicit invalidation for critical writes."],
+  "alternatives": ["Database-only indexing."],
+  "failure_modes": ["Stale reads after missed invalidation."],
+  "measurements": ["Compared p95 latency over matched peak windows."],
+  "outcomes": ["Estimated p95 latency reduction of approximately 30%."],
+  "lessons": ["Metrics need traffic-mix normalization."],
+  "open_questions": ["Confirm exact cache hit-rate change."],
+  "claim_ids": ["claim_payment_cache"],
+  "story_ids": ["S001"]
+}

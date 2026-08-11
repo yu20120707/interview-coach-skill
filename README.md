@@ -20,6 +20,8 @@ Say `kickoff`, share your resume, and you're being coached in under 2 minutes.
 
 **Outcome calibration** — The system tracks whether its practice scores actually predict real interview outcomes. After 3+ real interviews, it runs scoring drift detection, identifies when external feedback contradicts coach scoring, and recalibrates. Cross-dimension root causes (like "conflict avoidance" affecting both Substance and Differentiation) get unified treatment instead of separate drills. The system also learns from successes — tracking which stories, dimensions, and patterns correlate with advancement.
 
+**Application-aware grilling** — Optionally bind prep, practice, mocks, and transcript analysis to the exact JD and immutable resume submitted for one application. High-risk resume Claims receive evidence-aware probe chains covering measurement, ownership, trade-offs, failure behavior, and counterfactuals. Demonstrated gaps persist as structured Weak Points and are retested across sessions. Coaching degrades explicitly when the submitted artifact is unavailable.
+
 **Role-fit assessment** — Structured evaluation of candidate-role fit across five dimensions (requirement coverage, seniority alignment, domain relevance, competency overlap, trajectory coherence). Distinguishes strong fits from investable stretches and long shots, so candidates focus their energy on roles where they're competitive. Over time, rejection patterns reveal targeting insights that no amount of practice can fix.
 
 **Enhanced company intelligence** — Three research depth levels (Quick Scan, Standard, Deep Dive) with a structured search protocol and claim verification. Every company-specific claim maps to a source tier (verified, general knowledge, or unknown). Prep briefs include targeted web research before applying company knowledge, with source attribution for every finding.
@@ -410,6 +412,12 @@ interview-coach-skill/
 ├── README.md                           # This file
 ├── LICENSE                             # MIT License
 ├── coaching_state.md                   # Created on first kickoff (persistent memory, auto-saved)
+├── claims.json                         # Optional structured interview Claims
+├── weak-points.json                    # Optional persistent evidence-backed gaps
+├── applications/                       # Optional application-specific immutable context
+├── workspace-template/                 # Empty evidence-aware workspace starters
+├── scripts/                            # Initialize, lock artifacts, validate evidence
+├── evals/                              # Evidence-aware regression fixtures
 └── references/
     ├── commands/                       # Per-command workflows (loaded on demand)
     │   ├── kickoff.md
@@ -447,8 +455,42 @@ interview-coach-skill/
     ├── story-mapping-engine.md         # Portfolio-optimized story mapping with fit scoring
     ├── calibration-engine.md           # Scoring drift detection, root cause tracking, success patterns
     ├── challenge-protocol.md           # Five-lens challenge framework (Level 5 only): assumption audit, blind spot scan, pre-mortem, devil's advocate, strengthening path
-    └── examples.md                     # Worked examples: scored answers, triage, rewrites, system design analysis
+    ├── examples.md                     # Worked examples: scored answers, triage, rewrites, system design analysis
+    ├── interview-evidence/              # Application context, Claims, planning, probes, weak points
+    └── schemas/                         # JSON Schema contracts for evidence-aware state
 ```
+
+### Optional evidence-aware setup
+
+Copy `workspace-template/claims.json` and `workspace-template/weak-points.json` into the candidate workspace. Add an application context only when you want coaching tied to a specific JD and submitted resume. Existing Markdown-only coaching remains supported.
+
+After changing evidence contracts or workflows, run:
+
+```bash
+python3 scripts/validate_evidence.py
+```
+
+Validate a candidate workspace—including path containment, hashes, and cross-record references—with:
+
+```bash
+python3 scripts/validate_evidence.py --workspace /path/to/candidate-workspace
+```
+
+To initialize optional files without overwriting existing candidate data:
+
+```bash
+python3 scripts/init_evidence_workspace.py /path/to/candidate-workspace \
+  --company "Acme" --role "Backend Engineer"
+```
+
+Snapshot and lock the exact JD or submitted resume before application-aware coaching:
+
+```bash
+python3 scripts/register_application_artifact.py /path/to/candidate-workspace \
+  app_acme_backend_engineer submitted_resume /path/to/resume.pdf
+```
+
+The snapshot filename is content-addressed, its SHA-256 is recorded in `context.json`, and workspace validation detects later tampering.
 
 ---
 

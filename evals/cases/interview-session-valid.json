@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "id": "session_acme_mock_001",
+  "application_id": "app_acme_backend",
+  "round_id": "round_technical_1",
+  "session_type": "mock",
+  "created_at": "2026-08-10T12:00:00Z",
+  "context_mode": "submitted_application",
+  "coverage_limitations": [],
+  "question_plan": {
+    "allocations": { "claims": 0.35, "jd": 0.25, "weak_points": 0.20, "round": 0.10, "general": 0.10 },
+    "covered_sources": ["claim_payment_cache", "jd:reliability"]
+  },
+  "units": [
+    {
+      "sequence": 1,
+      "question": "How did you establish the latency baseline?",
+      "answer_summary": "Candidate identified p95 and the sample window but not traffic normalization.",
+      "grade": "B",
+      "probe_type": "measurement",
+      "depth": 1,
+      "claim_ids": ["claim_payment_cache"],
+      "evidence": "Explained baseline and window; attribution remained incomplete."
+    }
+  ],
+  "scores": { "substance": 3.0, "structure": 3.5, "relevance": 4.0, "credibility": 3.0, "differentiation": 3.0 },
+  "observations": ["Candidate named p95 and a two-week window."],
+  "inferences": ["Traffic-mix normalization may be a credibility risk."],
+  "weak_point_ids": ["weak_latency_attribution"]
+}

@@ -1,5 +1,18 @@
 # analyze — Transcript Analysis Workflow
 
+### Application and Claim Grounding
+
+When company/role or application identity can be resolved:
+
+1. compare transcript statements against the JD and immutable submitted resume;
+2. link answers to active Claims where the wording or underlying project matches;
+3. identify which required probes were actually tested by the interviewer;
+4. record factual transcript/recruiter content as observations;
+5. record root-cause and hiring-signal explanations as inferences;
+6. create/update structured Weak Points only when the persistence threshold is met.
+
+If the exact submitted artifact is unavailable, disclose the limitation and avoid claiming that every resume Claim was tested.
+
 Use `references/transcript-processing.md` as execution guide.
 
 ### Cold Start (No Coaching State)
@@ -187,6 +200,14 @@ When rewriting:
 - Questions added to Question Bank: [count]
 - Patterns observed: [new effective/ineffective patterns, or "not enough data yet"]
 - Company learning: [new observations about this company's interview patterns, or "first interview at this company"]
+
+## Evidence Updates (if structured evidence state exists)
+- Application/context mode:
+- Claims tested and probe coverage:
+- Observed evidence added:
+- Coach inferences added:
+- Weak Points opened/updated/resurfaced:
+- Claim defensibility recommendations (with session/unit evidence):
 
 ## Confidence
 - Score confidence:

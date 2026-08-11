@@ -234,4 +234,11 @@ Last updated: [date]
 ## Coaching Notes
 [Freeform observations that don't fit structured fields — things the coach should remember between sessions]
 - [date]: [observation — e.g., "candidate freezes in panel formats," "gets defensive about short tenure at X," "prefers morning interviews," "mentioned they interview better after coffee"]
+
+## Evidence Workspace
+- Schema version: 1.0
+- Claims path: claims.json
+- Weak Points path: weak-points.json
+- Active application ID:
+- Last validation:
 ```

@@ -1,5 +1,14 @@
 # debrief — Post-Interview Rapid Capture Workflow
 
+### Evidence-Aware Capture
+
+If the application resolves, capture the round under that application and preserve the distinction between:
+
+- **observed**: recalled question, candidate answer, interviewer behavior, or faithful external wording;
+- **inferred**: the candidate's or coach's interpretation of what it meant.
+
+Ask which submitted-resume Claim or project was being tested when reasonably identifiable. Mark uncertain links as uncertain rather than forcing a Claim ID.
+
 Captures what happened in a real interview while it's still fresh. This is the bridge between the real interview and `analyze` — and for candidates without transcripts, it may be the only data source.
 
 ### When to Use
@@ -105,6 +114,14 @@ Based on the emotional check in step 1, adapt:
 - Questions matched from past interviews: [any Question Bank matches, or "no prior data"]
 - Company pattern observations: [anything learned about this company's interview approach]
 
+## Evidence Capture (if application context resolves)
+- Application / round:
+- Claims tested (confirmed or uncertain):
+- Probe types recalled:
+- Observed evidence:
+- Candidate interpretation (not external fact):
+- Potential Weak Points to confirm through `analyze`:
+
 ## Transcript Status
 - [ ] Transcript available → run `analyze` when ready
 - [ ] No transcript → directional analysis above is what we have
@@ -119,3 +136,4 @@ Update `coaching_state.md` per the State Update Triggers in SKILL.md:
 - Interview Loop updates: round completed, stories used, signals noted
 - Outcome Log: add entry with Result: pending
 - Interview Intelligence updates: recalled questions to Question Bank (marked "recall-only"), recruiter/interviewer feedback to Recruiter/Interviewer Feedback table, Company Patterns if new observations emerged
+- Structured evidence updates: add a `real_debrief` session record when enough context exists; keep low-confidence recalled units as `not_scored`; do not create high-severity Weak Points from memory alone unless external feedback explicitly supports them

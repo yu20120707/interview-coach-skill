@@ -2,6 +2,17 @@
 
 A lightweight command for capturing information that arrives between structured workflows. Feedback does **capture**, not analysis. Analysis happens in `analyze`, `progress`, and `prep` when the data becomes relevant.
 
+### Structured Evidence Rule
+
+When evidence files exist, preserve the raw category before interpreting it:
+
+- recruiter/interviewer wording → Weak Point evidence kind `observed`;
+- candidate recollection of their answer → `observed`, with the source marked as recollection;
+- coach explanation/root cause → `inferred`;
+- outcome → application/Outcome Log fact, never a proxy for a specific competency without supporting evidence.
+
+Use the Weak Point Feedback Engine for deduplication and lifecycle transitions. Do not silently retire a Claim; record an evidence-backed recommendation for the candidate to confirm.
+
 ### When to Use
 
 - Recruiter or interviewer sends feedback (formal or informal)
@@ -31,6 +42,7 @@ Classify the candidate's input into one of five types. If ambiguous, ask: "Is th
 - Update Company Patterns if this reveals something about what the company values
 - If feedback references a specific round, cross-reference with Question Bank entries for that round
 - If feedback contradicts coach scoring, log the discrepancy in Calibration State → Scoring Drift Log
+- If structured state exists, append the exact/faithful wording as observed evidence to the matching Weak Point, or create one when the persistence threshold is met. Store coach interpretation separately.
 
 **Output**: Brief confirmation of what was captured, the dimension mapping, and any discrepancy with previous coaching assessment. If the feedback suggests a coaching pivot, say so: "This feedback suggests [X] matters more than we've been prioritizing. Worth revisiting in your next `progress` review." If the feedback points to a specific interviewer concern pattern, suggest: "`concerns` can help you build counter-evidence for this."
 

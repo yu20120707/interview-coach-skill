@@ -2,6 +2,8 @@
 
 Use `references/storybank-guide.md`.
 
+When `claims.json` or Project Deep Dives exist, also use `references/interview-evidence/project-deep-dive.md` and `references/interview-evidence/claim-risk-engine.md`. Storybank remains the delivery/narrative layer; Project Deep Dive owns project facts and decisions; Claims identify exact attack surfaces.
+
 Menu:
 
 ```text
@@ -24,6 +26,7 @@ When the candidate selects "Add," don't jump straight to STAR format. Most peopl
 3. When you hear a promising story, say: "That's a strong story. Let's capture it." Then walk through STAR.
 4. After STAR, extract the earned secret (see `references/differentiation.md`).
 5. Index it in the storybank table.
+6. Link the story to a Project Deep Dive and relevant Claim IDs when they exist. If story prose conflicts with project facts, resolve the conflict with the candidate before saving either version.
 
 Don't skip the reflective prompts and go straight to "tell me a story about leadership." That produces rehearsed, thin stories. The prompts produce real ones.
 
@@ -37,6 +40,8 @@ Story coach Matthew Dicks (author of *Storyworthy*, via Lenny's Podcast) identif
 - **The "But & Therefore" test**: Replace "and then" connectors with "but" and "therefore" to create cause-and-effect chains. If you can't, the story lacks narrative tension.
 
 **Important**: When adding a story, write the full STAR text to the Story Details section in `coaching_state.md` — not just the index row in the Storybank table. The table is a quick-reference index. The Story Details section is where the actual story lives, including Situation, Task, Action, Result, Earned Secret, deploy use-case, and version history. Without the full text, the coach can't help improve the story in a future session without asking the candidate to retell it from scratch.
+
+If structured evidence state exists, add `Project ID` and `Claim IDs` to the Story Details metadata. Do not duplicate the complete Project Deep Dive inside the story.
 
 ### Improving Stories — Structured Upgrade Protocol
 

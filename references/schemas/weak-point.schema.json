@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/noamseg/interview-coach-skill/references/schemas/weak-point.schema.json",
+  "title": "Weak Point Collection",
+  "type": "object",
+  "required": ["schema_version", "weak_points"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "weak_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "topic", "severity", "status", "evidence", "dimension_links", "claim_ids", "next_drill", "updated_at"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^weak_[a-z0-9_]+$" },
+          "topic": { "type": "string", "minLength": 1 },
+          "severity": { "enum": ["low", "medium", "high"] },
+          "status": { "enum": ["open", "improving", "resolved", "resurfaced"] },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["kind", "detail", "source"],
+              "additionalProperties": false,
+              "properties": {
+                "kind": { "enum": ["observed", "inferred"] },
+                "detail": { "type": "string", "minLength": 1 },
+                "source": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "dimension_links": { "type": "array", "items": { "enum": ["Substance", "Structure", "Relevance", "Credibility", "Differentiation"] }, "uniqueItems": true },
+          "claim_ids": { "type": "array", "items": { "type": "string", "pattern": "^claim_[a-z0-9_]+$" }, "uniqueItems": true },
+          "next_drill": { "type": "string", "minLength": 1 },
+          "first_detected_at": { "type": "string", "format": "date-time" },
+          "updated_at": { "type": "string", "format": "date-time" },
+          "resolved_at": { "type": "string", "format": "date-time" },
+          "resolution_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["session_id", "unit_sequence", "probe_type", "result", "adversarial", "tested_at"],
+              "additionalProperties": false,
+              "properties": {
+                "session_id": { "type": "string", "pattern": "^session_[a-z0-9_]+$" },
+                "unit_sequence": { "type": "integer", "minimum": 1 },
+                "probe_type": { "enum": ["fact", "mechanism", "ownership", "measurement", "tradeoff", "failure", "alternative", "counterfactual", "behavioral", "general"] },
+                "result": { "const": "success" },
+                "adversarial": { "type": "boolean" },
+                "tested_at": { "type": "string", "format": "date-time" }
+              }
+            }
+          },
+          "recurrence_count": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

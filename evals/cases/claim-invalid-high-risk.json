@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "claims": [
+    {
+      "id": "claim_bad",
+      "statement": "Improved performance by 80%.",
+      "source": { "type": "user_statement", "path": "conversation" },
+      "evidence": [],
+      "risk": "high",
+      "defensibility": "untested",
+      "status": "active",
+      "required_probes": ["measurement"]
+    }
+  ]
+}

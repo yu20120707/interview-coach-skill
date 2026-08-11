@@ -1,5 +1,17 @@
 # prep — Prep Brief Workflow
 
+### Application-Aware Setup
+
+Before ordinary prep logic, run the Application Context Resolver when the candidate names a company/role or has an active application loop.
+
+1. Resolve JD and resume artifacts using `references/interview-evidence/application-context.md`.
+2. Prefer the immutable submitted resume. If unavailable, declare the context mode and limitation once.
+3. Load only active Claims referenced by that application and open/resurfaced Weak Points relevant to the role.
+4. Build a Claim Risk Map using `references/interview-evidence/claim-risk-engine.md`.
+5. Use linked Project Deep Dives to distinguish confirmed project facts from open questions.
+
+Do not replace normal role-fit, company, format, concern, or Storybank analysis. The evidence packet makes those sections more specific.
+
 ### Required Inputs
 
 - Company
@@ -430,6 +442,17 @@ When generating Likely Concerns, pull from the Role-Fit Assessment's gap classif
 - Overuse warnings: [stories with Use Count 3+]
 - Freshness warnings: [stories used in prior rounds at this company]
 - Assessment: [Healthy / Needs work / Critical gaps — with specific recommendations]
+
+## Application Evidence (if application context resolves)
+- Context mode: [submitted_application / tailored_application / jd_plus_resume / resume_only]
+- Artifact used: [immutable path or supplied source]
+- Coverage limitations: [none or explicit list]
+- Active Claims in scope: [count]
+- Open/resurfaced Weak Points in scope: [count]
+
+### Claim Risk Map
+| Claim | Source | Risk | Defensibility | Missing proof | Next probe |
+|-------|--------|------|---------------|---------------|------------|
 
 ## Predicted Questions (7-10)
 [If Interview Intelligence has real questions from past rounds at this company, list those first, flagged as "Asked in Round N". Use cross-company competency frequency from the Question Bank to weight remaining predictions — competencies that appear frequently across the candidate's interviews are more likely to appear again.]

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "claims": [
+    {
+      "id": "claim_payment_cache",
+      "statement": "Reduced payment API latency by approximately 30% through cache redesign.",
+      "source": { "type": "submitted_resume", "path": "applications/app_acme_backend/submitted-resume.md", "application_id": "app_acme_backend" },
+      "project_id": "project_payment_platform",
+      "story_ids": ["S001"],
+      "evidence": [{ "kind": "user_confirmed", "detail": "Candidate described the before/after measurement window.", "confidence": "medium" }],
+      "assumptions": ["30% is an estimate from sampled p95 latency."],
+      "risk": "high",
+      "defensibility": "untested",
+      "status": "active",
+      "required_probes": ["measurement", "tradeoff", "failure"]
+    }
+  ]
+}
