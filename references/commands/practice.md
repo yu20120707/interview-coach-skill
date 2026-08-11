@@ -13,6 +13,8 @@ When a target company/application is explicit or active:
 
 Default plan: Claims 35%, JD 25%, Weak Points 20%, round/format 10%, new/general 10%. Rebalance per `references/interview-evidence/question-planner.md`; these are planning weights, not a second score.
 
+For technical practice, consult `references/question-bank/manifest.json` after the plan is built. Load only the topic-matched source(s): real-interview entries for realistic wording/follow-up patterns, fundamentals entries for targeted knowledge drills. Connect every textbook question to the target role, submitted Claim, Project Deep Dive, or explicit study goal; do not replace application coverage with random trivia.
+
 Show menu with progression status:
 
 ```text
@@ -158,6 +160,7 @@ After each practice session (not per-round — at the end of the session):
 When the candidate runs `practice technical`, don't just throw all four drills at them. Run a structured session:
 
 1. **Check coaching state.** Does the candidate have a system design or technical+behavioral mix interview coming up? If so, tailor drill scenarios to their target company and role. If not, use generic scenarios.
+   - If the target topics match the bundled question bank, read its manifest and the smallest relevant source set. For example, use `linux-concise` for rapid warm-up and `linux-full` only when mechanism depth is needed.
 2. **Check Format Discovery data.** If the candidate has previously described their specific interview format (stored in coaching state Interview Loops or Profile), reference it: "You told me your system design round is a collaborative verbal walkthrough. I'll tailor the drills to that format."
 3. **Select 1-2 drills per session.** Don't run all four — a 30-minute session covering Thinking Out Loud + Clarification-Seeking is better than a shallow pass through all four. Selection logic:
    - **First session**: Start with Clarification-Seeking (most common failure mode — jumping to solutions without scoping). Follow with Thinking Out Loud.

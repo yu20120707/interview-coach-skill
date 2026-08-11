@@ -142,10 +142,13 @@ When a command is application-specific, load only the relevant modules:
 - **`prep`, `practice`, `mock`, application-specific `analyze`**: read `references/interview-evidence/application-context.md` and `references/interview-evidence/workspace-adapter.md`.
 - **`prep`, `practice`, `mock` when Claims exist**: also read `references/interview-evidence/claim-risk-engine.md`.
 - **`practice`, `mock` with application context**: also read `references/interview-evidence/question-planner.md` and `references/interview-evidence/progressive-probing.md`.
+- **Technical `prep`, `practice`, or `mock`**: read `references/question-bank/manifest.json`, select only entries whose topics match the JD, submitted Claims, Weak Points, or requested drill, then read those selected files. Prefer `real_interview` for observed question patterns and `fundamentals` for mechanism/trade-off drills. Never load the whole bank by default.
 - **`stories` when Claims or Project Deep Dives exist**: also read `references/interview-evidence/project-deep-dive.md`.
 - **`practice`, `mock`, `analyze`, `debrief`, `feedback`, `progress` when structured evidence state exists**: also read `references/interview-evidence/weak-point-engine.md`.
 
 Do not load unrelated applications, retired Claims, resolved Weak Points, or all evidence schemas into the active context. The workspace adapter and JSON schemas are the source of truth for structured evidence; `coaching_state.md` retains preferences, strategy, and summaries.
+
+Question-bank material is supporting evidence, not the interview plan's source of truth. Use this priority: actual JD/submitted resume/Claims/Project Deep Dive/prior Weak Points → relevant real-interview samples → relevant fundamentals notes. Reported questions describe past experiences, not current company requirements. Verify version-sensitive technical details and do not paste canned answers as if they prove candidate understanding.
 
 ## Mode Detection
 

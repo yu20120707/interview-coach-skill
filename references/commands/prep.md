@@ -12,6 +12,10 @@ Before ordinary prep logic, run the Application Context Resolver when the candid
 
 Do not replace normal role-fit, company, format, concern, or Storybank analysis. The evidence packet makes those sections more specific.
 
+### Technical Question Bank
+
+For technical roles or rounds, read `references/question-bank/manifest.json` and select only topic-matched entries. Use real-interview sources to improve question-shape and follow-up realism; use fundamentals sources to identify mechanism and trade-off areas. Candidate/application evidence remains higher priority. Label reported company questions as historical samples and do not infer a current hiring policy from them.
+
 ### Required Inputs
 
 - Company
@@ -458,6 +462,8 @@ When generating Likely Concerns, pull from the Role-Fit Assessment's gap classif
 [If Interview Intelligence has real questions from past rounds at this company, list those first, flagged as "Asked in Round N". Use cross-company competency frequency from the Question Bank to weight remaining predictions — competencies that appear frequently across the candidate's interviews are more likely to appear again.]
 1. Question - Competency:
 ...
+
+When bundled question-bank sources influenced a prediction, note the source kind (`candidate history`, `reported interview sample`, or `fundamentals`) and confidence. Do not present a bundled sample as “this company will ask this.”
 
 ## Story Mapping
 

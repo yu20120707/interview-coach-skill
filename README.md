@@ -22,6 +22,8 @@ Say `kickoff`, share your resume, and you're being coached in under 2 minutes.
 
 **Application-aware grilling** — Optionally bind prep, practice, mocks, and transcript analysis to the exact JD and immutable resume submitted for one application. High-risk resume Claims receive evidence-aware probe chains covering measurement, ownership, trade-offs, failure behavior, and counterfactuals. Demonstrated gaps persist as structured Weak Points and are retested across sessions. Coaching degrades explicitly when the submitted artifact is unavailable.
 
+**Technical question bank** — Bundles two reported interview collections plus focused C++, Linux, MySQL, operating-system, networking, and concurrency study notes. A manifest routes only the topic-matched sources into technical prep, practice, or mocks; actual application evidence always takes priority, and reported questions are treated as historical samples rather than current hiring guarantees.
+
 **Role-fit assessment** — Structured evaluation of candidate-role fit across five dimensions (requirement coverage, seniority alignment, domain relevance, competency overlap, trajectory coherence). Distinguishes strong fits from investable stretches and long shots, so candidates focus their energy on roles where they're competitive. Over time, rejection patterns reveal targeting insights that no amount of practice can fix.
 
 **Enhanced company intelligence** — Three research depth levels (Quick Scan, Standard, Deep Dive) with a structured search protocol and claim verification. Every company-specific claim maps to a source tier (verified, general knowledge, or unknown). Prep briefs include targeted web research before applying company knowledge, with source attribution for every finding.
@@ -457,6 +459,7 @@ interview-coach-skill/
     ├── challenge-protocol.md           # Five-lens challenge framework (Level 5 only): assumption audit, blind spot scan, pre-mortem, devil's advocate, strengthening path
     ├── examples.md                     # Worked examples: scored answers, triage, rewrites, system design analysis
     ├── interview-evidence/              # Application context, Claims, planning, probes, weak points
+    ├── question-bank/                   # Manifest-routed technical fundamentals and interview samples
     └── schemas/                         # JSON Schema contracts for evidence-aware state
 ```
 
@@ -468,6 +471,7 @@ After changing evidence contracts or workflows, run:
 
 ```bash
 python3 scripts/validate_evidence.py
+python3 scripts/validate_question_bank.py
 ```
 
 Validate a candidate workspace—including path containment, hashes, and cross-record references—with:

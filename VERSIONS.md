@@ -6,6 +6,7 @@
 - Added v1.0 Claim, Project Deep Dive, Interview Session, and Weak Point contracts.
 - Added evidence-aware planning and progressive probes to existing coaching commands.
 - Added observed-vs-inferred feedback separation, SHA-256 artifact locking/tamper detection, calibration, migration, templates, and regression validation.
+- Added a manifest-routed technical question bank with two reported interview collections and C++, Linux, MySQL, OS, networking, and concurrency fundamentals.
 
 Each version has a clear thesis — not a feature grab bag.
 

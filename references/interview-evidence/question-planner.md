@@ -14,6 +14,8 @@ Build this internal plan before asking the first question in application-aware `
 
 Weights are targets, not quotas. Record actual covered sources in the session.
 
+Bundled question-bank items live inside the existing source categories; they do not receive a new allocation that dilutes application evidence. Topic-matched real-interview samples may inform round/format wording, while fundamentals notes may inform new/general or Claim follow-ups.
+
 ## Rebalancing
 
 - No active Claims: move Claim weight to JD and Weak Points.

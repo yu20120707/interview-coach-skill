@@ -8,6 +8,8 @@ Build an internal Question Plan using Claims, JD must-haves, Weak Points, round 
 
 The mock has one scoring system: Substance, Structure, Relevance, Credibility, and Differentiation. A–D probe grades are internal evidence for those scores, not a competing scorecard.
 
+For technical mocks, read `references/question-bank/manifest.json` and load only topic-matched entries after application evidence has shaped the plan. Use real-interview material for realistic sequencing and fundamentals material for mechanism/trade-off probes. Never reveal or paste a canned answer before the candidate responds, and never claim a reported question is a current company requirement.
+
 A complete simulated interview (4-6 questions in sequence) with holistic feedback on the full arc — not just individual answers.
 
 ### Setup
